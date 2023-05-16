@@ -4,6 +4,12 @@ export default class Math {
   }
 
   sum(...args: Array<number>): number {
-    return args.reduce((val: number, cVal: number) => val + cVal, 0);
+    const defaultValue: number = 0;
+
+    return args.reduce(
+      (previousValue: number, currentValue: number) =>
+        previousValue + currentValue,
+      defaultValue
+    );
   }
 }
