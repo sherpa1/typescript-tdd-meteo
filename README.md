@@ -1,12 +1,6 @@
-# TypeScript Starter Kit
+# Initiation à TDD (Test-Driven Development) avec TypeScript
 
-Configuration de base pour un projet TypeScript : 
-- Eslint,
-- TS Config,
-- Jest,
-- Nodemon,
-- Gitignore
-- Dépendances NPM
+Système factice de météo.
 
 ## Installation
 
