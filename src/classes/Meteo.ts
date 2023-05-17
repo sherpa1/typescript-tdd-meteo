@@ -1,4 +1,4 @@
-export enum Unity {
+export enum TemperatureUnity {
   CELSIUS = "CELSIUS",
   FAHRENHEIT = "FAHRENHEIT",
   KELVIN = "KELVIN",
@@ -8,20 +8,20 @@ export enum Unity {
 import MeteoException from "./MeteoException";
 
 class Meteo {
-  unityValue(unity: Unity): number {
+  unityValue(unity: TemperatureUnity): number {
     let value: number;
 
     switch (unity) {
-      case Unity.CELSIUS:
+      case TemperatureUnity.CELSIUS:
         value = 1;
         break;
-      case Unity.FAHRENHEIT:
+      case TemperatureUnity.FAHRENHEIT:
         value = 33.8;
         break;
-      case Unity.KELVIN:
+      case TemperatureUnity.KELVIN:
         value = 274.1;
         break;
-      case Unity.RANKINE:
+      case TemperatureUnity.RANKINE:
         value = 493.47;
         break;
       default:
@@ -31,7 +31,10 @@ class Meteo {
     return value;
   }
 
-  temperature(city: string, unity: Unity = Unity.CELSIUS): number {
+  temperature(
+    city: string,
+    unity: TemperatureUnity = TemperatureUnity.CELSIUS
+  ): number {
     if (!city.length) {
       throw new MeteoException("City must be filled");
     }
