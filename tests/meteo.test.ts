@@ -28,23 +28,23 @@ describe("Meteo", () => {
       m.temperature("");
     }).toThrowError(new MeteoException("City must be filled"));
   });
-  test("Meteo temperature returns 13° (CELSIUS), when Temperature Unity is not filled", () => {
+  test("Meteo temperature returns 13° (CELSIUS), when temperature measure unity is not filled", () => {
     expect(m.temperature("Nancy")).toEqual(13);
   });
-  test("Meteo temperature returns CELSIUS, when Temperature Unity is CELSIUS", () => {
+  test("Meteo temperature returns CELSIUS, when temperature measure unity is CELSIUS", () => {
     expect(m.temperature("Nancy", TemperatureMeasureUnity.CELSIUS)).toEqual(13);
   });
-  test("Meteo temperature returns a value expressed in FAHRENHEIT when Temperature Unity is FAHRENHEIT", () => {
+  test("Meteo temperature returns a value expressed in FAHRENHEIT when temperature measure unity is FAHRENHEIT", () => {
     expect(m.temperature("Nancy", TemperatureMeasureUnity.FAHRENHEIT)).toEqual(
       439.4
     );
   });
-  test("Meteo temperature returns a value expressed in KELVIN when Temperature Unity is KELVIN", () => {
+  test("Meteo temperature returns a value expressed in KELVIN when temperature measure unity is KELVIN", () => {
     expect(m.temperature("Nancy", TemperatureMeasureUnity.KELVIN)).toEqual(
       3563.3
     );
   });
-  test("Meteo temperature returns a value expressed in RANKINE when Temperature Unity is RANKINE", () => {
+  test("Meteo temperature returns a value expressed in RANKINE when temperature measure unity is RANKINE", () => {
     expect(m.temperature("Nancy", TemperatureMeasureUnity.RANKINE)).toEqual(
       6415.110000000001
     );
