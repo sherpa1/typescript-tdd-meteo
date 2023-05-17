@@ -1,4 +1,31 @@
-# TypeScript Bootstrap
+# TypeScript Starter Kit
+
+Configuration de base pour un projet TypeScript : 
+- Eslint,
+- TS Config,
+- Jest,
+- Nodemon,
+- Gitignore
+- Dépendances NPM
+
+## Installation
+
+Avant toute utilisation, installer les dépendances NPM :
+
+`npm install`
+
+## Exécution
+
+`npm start`
+
+## Développement avec Hot Reloading
+
+`npm run watch`
+
+## Build pour la production
+
+`npm run build`
+
 
 --
 
